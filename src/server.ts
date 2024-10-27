@@ -6,7 +6,6 @@ interface ColorScheme {
     primary: string;
     secondary: string;
 }
-
 export class CalendarServer {
     private server: any;
     private port: number;
@@ -24,7 +23,16 @@ export class CalendarServer {
     constructor(port: number) {
         this.port = port;
     }
+    public getColorScheme(color: string): ColorScheme {
+        // Check if the color is a valid hex code
+        const hexColorPattern = /^#([0-9A-F]{3}){1,2}$/i;
+        if (hexColorPattern.test(color)) {
+            return { primary: color, secondary: color };
+        }
 
+        // Use predefined color scheme or default to red
+        return this.colorSchemes[color.toLowerCase()] || this.colorSchemes.red;
+    }
     public start(): void {
         if (!this.server) {
             this.server = http.createServer((req: any, res: any) => {
@@ -117,7 +125,7 @@ export class CalendarServer {
     }
     // Type 1: 显示年月日星期
     private generateTypeOneSVG(params: { color: string, date: string | null, locale: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         const dateInfo = this.getDateInfo(params.date, params.locale);
         return `
         <svg id="dynamic_icon_type1" data-name="dynamic_icon_type1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 504.5">
@@ -132,7 +140,7 @@ export class CalendarServer {
     }
     // Type 2: 显示年月日
     private generateTypeTwoSVG(params: { color: string, date: string | null, locale: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         const dateInfo = this.getDateInfo(params.date, params.locale);
         return `
         <svg id="dynamic_icon_type2" data-name="dynamic_icon_type2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 504.5">
@@ -146,7 +154,7 @@ export class CalendarServer {
     }
     // Type 3: 显示年月
     private generateTypeThreeSVG(params: { color: string, date: string | null, locale: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         const dateInfo = this.getDateInfo(params.date, params.locale);
         return `
             <svg id="dynamic_icon_type3" data-name="dynamic_icon_type3" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 504.5">
@@ -168,7 +176,7 @@ export class CalendarServer {
 
     // Type 4: 仅显示年
     private generateTypeFourSVG(params: { color: string, date: string | null, locale: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         const dateInfo = this.getDateInfo(params.date, params.locale);
         return `
             <svg id="dynamic_icon_type4" data-name="dynamic_icon_type4" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 504.5">
@@ -189,7 +197,7 @@ export class CalendarServer {
 
     // Type 5: 显示周数
     private generateTypeFiveSVG(params: { color: string, date: string | null, locale: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         const dateInfo = this.getDateInfo(params.date, params.locale);
         return `
             <svg id="dynamic_icon_type5" data-name="dynamic_icon_type5" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 504.5">
@@ -243,7 +251,7 @@ export class CalendarServer {
             </svg>`;
     }
     private generateTypeSevenSVG(params: { color: string, date: string | null, locale: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         const dateInfo = this.getDateInfo(params.date, params.locale);
         const diffDays = dateInfo.daysUntilToday;
 
@@ -290,7 +298,7 @@ export class CalendarServer {
 
 
     private generateTypeEightSVG(params: { color: string, date: string | null, locale: string, content: string }): string {
-        const colorScheme = this.colorSchemes[params.color.toLowerCase()] || this.colorSchemes.red;
+        const colorScheme = this.getColorScheme(params.color.toLowerCase());
         let content = params.content || '';
         let fontSize;
 
