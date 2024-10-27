@@ -16,7 +16,7 @@ export class CalendarServer {
         yellow: { primary: "#feca57", secondary: "#ff9f43" },
         green: { primary: "#55efc4", secondary: "#19b37a" },
         purple: { primary: "#a55eea", secondary: "#8854d0" },
-        pink: { primary: "#fd79a8", secondary: "#ff4757" },
+        pink: { primary: "#fd79a8", secondary: "#e05b8a" },
         orange: { primary: "#ff7f50", secondary: "#ff6348" },
         grey: { primary: "#576574", secondary: "#222f3e" }
     };
