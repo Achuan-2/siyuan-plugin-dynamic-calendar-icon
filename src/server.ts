@@ -14,9 +14,9 @@ export class CalendarServer {
         red: { primary: "#DD2F45", secondary: "#F4BEC3" },
         blue: { primary: "#2bb7ff", secondary: "#0097e6" },
         yellow: { primary: "#feca57", secondary: "#ff9f43" },
-        green: { primary: "#55efc4", secondary: "#2F8867" },
+        green: { primary: "#55efc4", secondary: "#19b37a" },
         purple: { primary: "#a55eea", secondary: "#8854d0" },
-        pink: { primary: "#ff6b81", secondary: "#ff4757" },
+        pink: { primary: "#fd79a8", secondary: "#ff4757" },
         orange: { primary: "#ff7f50", secondary: "#ff6348" },
         grey: { primary: "#576574", secondary: "#222f3e" }
     };
@@ -153,12 +153,12 @@ export class CalendarServer {
                 <path class="cls-6" d="M512,447.5c0,32-25,57-57,57H57c-32,0-57-25-57-57V120.5c0-31,25-57,57-57h398c32,0,57,26,57,57v327Z" style="fill: #ecf2f7;"/>
                 <path class="cls-1" d="M39,0h434c21.5,0,39,17.5,39,39v146H0V39C0,17.5,17.5,0,39,0Z" style="fill: ${colorScheme.primary};"/>
                 <g style="fill: ${colorScheme.secondary};">
-                    <circle  cx="468.5" cy="142" r="14"/>
-                    <circle  cx="468.5" cy="100" r="14"/>
-                    <circle  cx="425.5" cy="142" r="14"/>
-                    <circle  cx="425.5" cy="100" r="14"/>
-                    <circle  cx="382.5" cy="142" r="14"/>
-                    <circle  cx="382.5" cy="100" r="14"/>
+                    <circle  cx="468.5" cy="135" r="14"/>
+                    <circle  cx="468.5" cy="93" r="14"/>
+                    <circle  cx="425.5" cy="135" r="14"/>
+                    <circle  cx="425.5" cy="93" r="14"/>
+                    <circle  cx="382.5" cy="135" r="14"/>
+                    <circle  cx="382.5" cy="93" r="14"/>
                 </g>
                 <text id="year" transform="translate(22 146.5)" style="fill: #fff;font-size: 120px; font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK SC', 'Microsoft YaHei'; ">${dateInfo.year}</text>
                 <text id="month" transform="translate(260 410.5)" style="fill: #66757f;font-size: 160px;text-anchor: middle;font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK SC', 'Microsoft YaHei'; ">${dateInfo.month}</text>
@@ -175,12 +175,12 @@ export class CalendarServer {
                 <path class="cls-6" d="M512,447.5c0,32-25,57-57,57H57c-32,0-57-25-57-57V120.5c0-31,25-57,57-57h398c32,0,57,26,57,57v327Z" style="fill: #ecf2f7;"/>
                 <path class="cls-1" d="M39,0h434c21.5,0,39,17.5,39,39v146H0V39C0,17.5,17.5,0,39,0Z" style="fill: ${colorScheme.primary};"/>
                 <g style="fill: ${colorScheme.secondary};">
-                    <circle  cx="468.5" cy="142" r="14"/>
-                    <circle  cx="468.5" cy="100" r="14"/>
-                    <circle  cx="425.5" cy="142" r="14"/>
-                    <circle  cx="425.5" cy="100" r="14"/>
-                    <circle  cx="382.5" cy="142" r="14"/>
-                    <circle  cx="382.5" cy="100" r="14"/>
+                    <circle  cx="468.5" cy="135" r="14"/>
+                    <circle  cx="468.5" cy="93" r="14"/>
+                    <circle  cx="425.5" cy="135" r="14"/>
+                    <circle  cx="425.5" cy="93" r="14"/>
+                    <circle  cx="382.5" cy="135" r="14"/>
+                    <circle  cx="382.5" cy="93" r="14"/>
                 </g>
                 <text id="month" transform="translate(260 410.5)" style="fill: #66757f;font-size: 180px;text-anchor: middle;font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK SC', 'Microsoft YaHei'; ">${dateInfo.year}</text>
             </svg>
@@ -196,12 +196,12 @@ export class CalendarServer {
                 <path class="cls-6" d="M512,447.5c0,32-25,57-57,57H57c-32,0-57-25-57-57V120.5c0-31,25-57,57-57h398c32,0,57,26,57,57v327Z" style="fill: #ecf2f7;"/>
                 <path class="cls-1" d="M39,0h434c21.5,0,39,17.5,39,39v146H0V39C0,17.5,17.5,0,39,0Z" style="fill: ${colorScheme.primary};"/>
                 <g style="fill: ${colorScheme.secondary};">
-                    <circle  cx="468.5" cy="142" r="14"/>
-                    <circle  cx="468.5" cy="100" r="14"/>
-                    <circle  cx="425.5" cy="142" r="14"/>
-                    <circle  cx="425.5" cy="100" r="14"/>
-                    <circle  cx="382.5" cy="142" r="14"/>
-                    <circle  cx="382.5" cy="100" r="14"/>
+                    <circle  cx="468.5" cy="135" r="14"/>
+                    <circle  cx="468.5" cy="93" r="14"/>
+                    <circle  cx="425.5" cy="135" r="14"/>
+                    <circle  cx="425.5" cy="93" r="14"/>
+                    <circle  cx="382.5" cy="135" r="14"/>
+                    <circle  cx="382.5" cy="93" r="14"/>
                 </g>
                 <text id="year" transform="translate(22 146.5)" style="fill: #fff;font-size: 120px; font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK SC', 'Microsoft YaHei'; ">${dateInfo.year}</text>
                 <text id="month" transform="translate(260 410.5)" style="fill: #66757f;font-size: 200px;text-anchor: middle;font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK SC', 'Microsoft YaHei'; ">${dateInfo.week}</text>
